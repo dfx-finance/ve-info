@@ -9,10 +9,10 @@ jobs:
         uses: actions/checkout@v3
       - name: Install pip dependencies
         run: pip install -r requirements.txt
-      - name: Read active gauges from chain
+      - name: Log active gauges on Ethereum
         run: python tasks/generate_eth_gauge_choices.py
         env:
-          ETH_RPC: ${{ secrets.ETH_RPC }}
+          ETH_RPC: ${{ secrets.ETH_RPC_URL }}
       - name: Commit changes
         run: |
           git config --global user.email "no-reply@github.com"
