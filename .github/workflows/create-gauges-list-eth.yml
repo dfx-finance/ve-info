@@ -1,6 +1,9 @@
 name: Gauges List
 run-name: Generating list of active gauges
-on: [push]
+on:
+  push:
+  schedule:
+    - cron: 0 4 * * 4 # every Thursday at 4am
 jobs:
   active-gauges-eth:
     runs-on: ubuntu-latest
