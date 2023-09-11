@@ -1,0 +1,28 @@
+name: Gauges List
+run-name: Generating list of active gauges
+on: [push]
+jobs:
+  active-gauges-eth:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: Install pip dependencies
+        run: |
+          python3 -m venv info-venv
+          source info-venv/bin/activate
+          pip install -r requirements.txt
+      - name: Read active gauges from chain
+        run: python tasks/generate_eth_gauge_choices.py
+        env:
+          ETH_RPC: ${{ secrets.ETH_RPC }}
+      - name: Commit changes
+        run: |
+          git config --global user.email "no-reply@github.com"
+          git config --global user.name "GitHub Actions"
+          git add -A
+          git commit -m "Snapshot latest gauges"
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
