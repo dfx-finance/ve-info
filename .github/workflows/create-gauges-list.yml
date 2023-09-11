@@ -8,10 +8,7 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v3
       - name: Install pip dependencies
-        run: |
-          python3 -m venv info-venv
-          source info-venv/bin/activate
-          pip install -r requirements.txt
+        run: pip install -r requirements.txt
       - name: Read active gauges from chain
         run: python tasks/generate_eth_gauge_choices.py
         env:
