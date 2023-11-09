@@ -1,0 +1,34 @@
+[
+    {
+        "address": "0xbe5869c78668b2c49c571005f3754a92472d9e1b",
+        "label": "dfx-cadc-v2-gauge"
+    },
+    {
+        "address": "0x1e07d4dad0614a811a12bdcd66016f48c6942a60",
+        "label": "dfx-euroc-v2-gauge"
+    },
+    {
+        "address": "0xa2bc5552a5a083e78ec820a91e97933133255572",
+        "label": "dfx-gyen-v2-gauge"
+    },
+    {
+        "address": "0x45c38b5126eb70e8b0a2c2e9fe934625641bf063",
+        "label": "dfx-nzds-v2-gauge"
+    },
+    {
+        "address": "0xb0de1886dd949b5dbfb9febf7ba283f5ff87c7eb",
+        "label": "dfx-tryb-v2-gauge"
+    },
+    {
+        "address": "0x520b0284bcd3fb0ba427df1fcd1de444c7c676a5",
+        "label": "dfx-xidr-v2-gauge"
+    },
+    {
+        "address": "0xe7006808e855f3707ec58bdfb66a096a7a6155e1",
+        "label": "dfx-xsgd-v2-gauge"
+    },
+    {
+        "address": "0xb41ab47a724fb24f1dc0e57380411c7fc5cdd00b",
+        "label": "dfx-gbpt-v2-gauge"
+    }
+]
