@@ -6,8 +6,22 @@ import time
 from multicall import Call, Multicall
 from web3 import Web3
 
-GAUGE_CONTROLLER_ADDR = "0x3C56A223fE8F61269E25eF1116f9f185074c6C44"
-DFX_DISTRIBUTOR_ADDR = "0x86E8C4e7549fBCa7eba1AefBdBc23993F721e5CA"
+GAUGE_CONTROLLER_ADDR = "0x539A33296459ED0DeAFF9febCfD37a05B73Fa8cF"
+DFX_DISTRIBUTOR_ADDR = "0xD3E7444d5DB4dDF0F9A1B52d62367C339B7bE8A9"
+DFX_SENDER_ADDR = "0x7ace867b3a503C6C76834ac223993FBD8963BED2"
+
+
+class Network:
+    def __init__(self, name, chain_id):
+        self.name = name
+        self.chain_id = chain_id
+
+
+# CCIP Chain Selectors
+CHAIN_SELECTORS = {
+    4949039107694359620: Network("arbitrum", 42161),
+    4051577828743386545: Network("polygon", 137),
+}
 
 rpc_url = os.getenv("ETH_RPC_URL")
 w3 = Web3(Web3.HTTPProvider(rpc_url))
@@ -30,6 +44,10 @@ def from_bool(value):
 
 
 def from_str(value):
+    return value
+
+
+def from_int(value):
     return value
 
 
@@ -81,8 +99,49 @@ def main():
     )
     gauges = gauges_multi()
 
+    # get all gauge types
+    mainnet_gauges = {
+        addr: name
+        for addr, name in gauges.items()
+        if name.startswith("dfx-") and name.endswith("-v3-gauge")
+    }
+    sidechain_gauges = {
+        addr: name
+        for addr, name in gauges.items()
+        if not name.startswith("dfx-") or not name.endswith("-v3-gauge")
+    }
+    sidechain_gauge_destinations_multi = Multicall(
+        [
+            Call(
+                DFX_SENDER_ADDR,
+                ["destinations(address)(address,uint64)", addr],
+                [(f"_junk", from_str), (addr, from_int)],
+            )
+            for addr in sidechain_gauges.keys()
+        ],
+        _w3=w3,
+    )
+    sidechain_gauge_destinations = sidechain_gauge_destinations_multi()
+
     # format output
-    output_gauges = [{"address": key, "label": value} for key, value in gauges.items()]
+    output_mainnet_gauges = [
+        {"address": key, "label": value, "network": 1}
+        for key, value in mainnet_gauges.items()
+    ]
+    output_sidechain_gauges = []
+    for key, value in sidechain_gauges.items():
+        selector = sidechain_gauge_destinations[key]
+        dst = CHAIN_SELECTORS.get(selector)
+        label = f"dfx-{value}-{dst.name}"
+        output_sidechain_gauges.append(
+            {
+                "address": key,
+                "label": label,
+                "network": dst.chain_id,
+            }
+        )
+    output_gauges = [*output_mainnet_gauges, *output_sidechain_gauges]
+
     week = 7 * 24 * 60 * 60
     epoch_start = int(time.time() // week * week)  # round to latest epoch start
     with open(f"./snapshots/gauge_choices-{epoch_start}.json", "w") as json_f:

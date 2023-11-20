@@ -1,34 +1,82 @@
 [
     {
-        "address": "0xbe5869c78668b2c49c571005f3754a92472d9e1b",
-        "label": "dfx-cadc-v2-gauge"
+        "address": "0xcda7d3bc7afee6cd31e1ce873d5ece2d31ab3045",
+        "label": "dfx-cadc-usdc-v3-gauge",
+        "network": 1
     },
     {
-        "address": "0x1e07d4dad0614a811a12bdcd66016f48c6942a60",
-        "label": "dfx-euroc-v2-gauge"
+        "address": "0x6b39714a842380da40cc43f242d68b3494e81de1",
+        "label": "dfx-euroc-usdc-v3-gauge",
+        "network": 1
     },
     {
-        "address": "0xa2bc5552a5a083e78ec820a91e97933133255572",
-        "label": "dfx-gyen-v2-gauge"
+        "address": "0x1379692340d737f7eea2a03fc4ce5de9c4a09fd4",
+        "label": "dfx-gbpt-usdc-v3-gauge",
+        "network": 1
     },
     {
-        "address": "0x45c38b5126eb70e8b0a2c2e9fe934625641bf063",
-        "label": "dfx-nzds-v2-gauge"
+        "address": "0x5296086d13d4ae687e6fe0e221b6154e82262f47",
+        "label": "dfx-gyen-usdc-v3-gauge",
+        "network": 1
     },
     {
-        "address": "0xb0de1886dd949b5dbfb9febf7ba283f5ff87c7eb",
-        "label": "dfx-tryb-v2-gauge"
+        "address": "0x2fd595d3df1f9ecfe8f9fa3378ca26fdf087a40a",
+        "label": "dfx-nzds-usdc-v3-gauge",
+        "network": 1
     },
     {
-        "address": "0x520b0284bcd3fb0ba427df1fcd1de444c7c676a5",
-        "label": "dfx-xidr-v2-gauge"
+        "address": "0xae946f37ee783fac5619a6b130fc99bb90d9b6ea",
+        "label": "dfx-tryb-usdc-v3-gauge",
+        "network": 1
     },
     {
-        "address": "0xe7006808e855f3707ec58bdfb66a096a7a6155e1",
-        "label": "dfx-xsgd-v2-gauge"
+        "address": "0xeedb542d94e82e598810681b2e5a749adcdf7575",
+        "label": "dfx-xidr-usdc-v3-gauge",
+        "network": 1
     },
     {
-        "address": "0xb41ab47a724fb24f1dc0e57380411c7fc5cdd00b",
-        "label": "dfx-gbpt-v2-gauge"
+        "address": "0xcfd675f5d960b44f68eb1661186e2ec284eddf59",
+        "label": "dfx-xsgd-usdc-v3-gauge",
+        "network": 1
+    },
+    {
+        "address": "0x037a88165821210756800ca174c8cb723c665b47",
+        "label": "dfx-cadc-usdc-gauge-arbitrum",
+        "network": 42161
+    },
+    {
+        "address": "0x94627cfe1b4a90fbfee438d8a1716ecce030b481",
+        "label": "dfx-gyen-usdc-gauge-arbitrum",
+        "network": 42161
+    },
+    {
+        "address": "0xcdc02072396dbe2137b09b4d187dc87d564ebd53",
+        "label": "dfx-usdce-usdc-gauge-arbitrum",
+        "network": 42161
+    },
+    {
+        "address": "0x8890e58993ee5c0276b9355306cba78a2f3ecf69",
+        "label": "dfx-cadc-usdc-gauge-polygon",
+        "network": 137
+    },
+    {
+        "address": "0xe8a1e6e278b5016794cc56df60783763c7b06959",
+        "label": "dfx-ngnc-usdc-gauge-polygon",
+        "network": 137
+    },
+    {
+        "address": "0x41e464c979853d4714d5453d22223258c14f78ba",
+        "label": "dfx-tryb-usdc-gauge-polygon",
+        "network": 137
+    },
+    {
+        "address": "0x83361a4bc7abe70d922da5ab50bbc3dbdfe45b7b",
+        "label": "dfx-xsgd-usdc-gauge-polygon",
+        "network": 137
+    },
+    {
+        "address": "0xca21c267500a14afab53d03bf56e7625dea7f4a5",
+        "label": "dfx-usdce-usdc-gauge-polygon",
+        "network": 137
     }
 ]
