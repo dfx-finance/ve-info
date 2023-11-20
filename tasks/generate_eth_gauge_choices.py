@@ -146,6 +146,8 @@ def main():
     epoch_start = int(time.time() // week * week)  # round to latest epoch start
     with open(f"./snapshots/gauge_choices-{epoch_start}.json", "w") as json_f:
         json.dump(output_gauges, json_f, indent=4)
+    with open(f"./snapshots/gauge_choices-latest.json", "w") as json_f:
+        json.dump(output_gauges, json_f, indent=4)
 
 
 if __name__ == "__main__":
