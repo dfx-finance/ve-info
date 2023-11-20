@@ -20,11 +20,6 @@
         "network": 1
     },
     {
-        "address": "0x2fd595d3df1f9ecfe8f9fa3378ca26fdf087a40a",
-        "label": "dfx-nzds-usdc-v3-gauge",
-        "network": 1
-    },
-    {
         "address": "0xae946f37ee783fac5619a6b130fc99bb90d9b6ea",
         "label": "dfx-tryb-usdc-v3-gauge",
         "network": 1

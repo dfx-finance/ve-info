@@ -10,6 +10,8 @@ GAUGE_CONTROLLER_ADDR = "0x539A33296459ED0DeAFF9febCfD37a05B73Fa8cF"
 DFX_DISTRIBUTOR_ADDR = "0xD3E7444d5DB4dDF0F9A1B52d62367C339B7bE8A9"
 DFX_SENDER_ADDR = "0x7ace867b3a503C6C76834ac223993FBD8963BED2"
 
+FILTER_GAUGES = ["nzds"]
+
 
 class Network:
     def __init__(self, name, chain_id):
@@ -140,7 +142,11 @@ def main():
                 "network": dst.chain_id,
             }
         )
-    output_gauges = [*output_mainnet_gauges, *output_sidechain_gauges]
+    output_gauges = [
+        g
+        for g in [*output_mainnet_gauges, *output_sidechain_gauges]
+        if g["label"].split("-")[1] not in FILTER_GAUGES
+    ]
 
     week = 7 * 24 * 60 * 60
     epoch_start = int(time.time() // week * week)  # round to latest epoch start
