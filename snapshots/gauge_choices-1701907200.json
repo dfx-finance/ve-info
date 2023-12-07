@@ -1,0 +1,77 @@
+[
+    {
+        "address": "0xcda7d3bc7afee6cd31e1ce873d5ece2d31ab3045",
+        "label": "dfx-cadc-usdc-v3-gauge",
+        "network": 1
+    },
+    {
+        "address": "0x6b39714a842380da40cc43f242d68b3494e81de1",
+        "label": "dfx-euroc-usdc-v3-gauge",
+        "network": 1
+    },
+    {
+        "address": "0x1379692340d737f7eea2a03fc4ce5de9c4a09fd4",
+        "label": "dfx-gbpt-usdc-v3-gauge",
+        "network": 1
+    },
+    {
+        "address": "0x5296086d13d4ae687e6fe0e221b6154e82262f47",
+        "label": "dfx-gyen-usdc-v3-gauge",
+        "network": 1
+    },
+    {
+        "address": "0xae946f37ee783fac5619a6b130fc99bb90d9b6ea",
+        "label": "dfx-tryb-usdc-v3-gauge",
+        "network": 1
+    },
+    {
+        "address": "0xeedb542d94e82e598810681b2e5a749adcdf7575",
+        "label": "dfx-xidr-usdc-v3-gauge",
+        "network": 1
+    },
+    {
+        "address": "0xcfd675f5d960b44f68eb1661186e2ec284eddf59",
+        "label": "dfx-xsgd-usdc-v3-gauge",
+        "network": 1
+    },
+    {
+        "address": "0x037a88165821210756800ca174c8cb723c665b47",
+        "label": "dfx-cadc-usdc-gauge-arbitrum",
+        "network": 42161
+    },
+    {
+        "address": "0x94627cfe1b4a90fbfee438d8a1716ecce030b481",
+        "label": "dfx-gyen-usdc-gauge-arbitrum",
+        "network": 42161
+    },
+    {
+        "address": "0xcdc02072396dbe2137b09b4d187dc87d564ebd53",
+        "label": "dfx-usdce-usdc-gauge-arbitrum",
+        "network": 42161
+    },
+    {
+        "address": "0x8890e58993ee5c0276b9355306cba78a2f3ecf69",
+        "label": "dfx-cadc-usdc-gauge-polygon",
+        "network": 137
+    },
+    {
+        "address": "0xe8a1e6e278b5016794cc56df60783763c7b06959",
+        "label": "dfx-ngnc-usdc-gauge-polygon",
+        "network": 137
+    },
+    {
+        "address": "0x41e464c979853d4714d5453d22223258c14f78ba",
+        "label": "dfx-tryb-usdc-gauge-polygon",
+        "network": 137
+    },
+    {
+        "address": "0x83361a4bc7abe70d922da5ab50bbc3dbdfe45b7b",
+        "label": "dfx-xsgd-usdc-gauge-polygon",
+        "network": 137
+    },
+    {
+        "address": "0xca21c267500a14afab53d03bf56e7625dea7f4a5",
+        "label": "dfx-usdce-usdc-gauge-polygon",
+        "network": 137
+    }
+]
