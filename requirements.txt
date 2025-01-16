@@ -24,7 +24,7 @@ jsonschema==4.19.0
 jsonschema-specifications==2023.7.1
 lru-dict==1.2.0
 multiaddr==0.0.9
-multicall==0.7.5
+multicall==0.10.0
 multidict==6.0.4
 netaddr==0.8.0
 parsimonious==0.8.1
