@@ -4,6 +4,7 @@ async-timeout==4.0.3
 attrs==23.1.0
 base58==2.1.1
 bitarray==2.8.1
+cchecksum==0.0.4
 certifi==2023.7.22
 charset-normalizer==3.2.0
 cytoolz==0.12.2
